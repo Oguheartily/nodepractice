@@ -1,0 +1,19 @@
+{
+  "name": "davegray",
+  "version": "1.0.0",
+  "description": "node server practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "nodemon server"
+  },
+  "author": "ogu heartily pasisi",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
