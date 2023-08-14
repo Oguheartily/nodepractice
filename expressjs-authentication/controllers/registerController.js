@@ -22,9 +22,9 @@ const handleNewUser = async (req, res) => {
     try {
         /**encrypt password */
         const hashedpwd = await bcrypt.hash(pwd, 10);
-        // store the new user
+        /* store the new user... usersDB.setUsers([...usersDB.users, newUser]); the square bracket in this code is very important */
         const newUser = { "username": user, "password": hashedpwd };
-        usersDB.setUsers({...usersDB.users, newUser});
+        usersDB.setUsers([...usersDB.users, newUser]);
         await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
@@ -32,7 +32,7 @@ const handleNewUser = async (req, res) => {
         console.log(usersDB.users);
         res.status(201).json({ "success": `New user ${user} created successfully`});
     } catch (err) {
-        res.status(500).json({ 'message': err.message })
+        res.status(500).json({ 'message': err.message });
     }
 }
 
