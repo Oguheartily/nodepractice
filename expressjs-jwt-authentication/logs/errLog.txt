@@ -1,0 +1,10 @@
+2023-08-05	20:51:07	47649932-85f3-4704-b17b-65e92a268dd8	TypeError: fsPromises.readFil is not a function
+2023-08-13	03:43:18	ddbe7d2c-cac3-4864-bc99-f6fb8854bae1	Error: undefined
+2023-08-13	03:43:18	bb845ff7-3a91-4049-9a14-8617f9aa6ed4	Error: undefined
+2023-08-13	03:45:20	2af1c176-1d17-4636-9f3e-5a0b14beff91	Error: undefined
+2023-08-13	03:45:20	b9155408-f7b2-4126-a71f-45ddfdb97457	Error: undefined
+2023-08-13	03:47:12	8ceea319-fd29-43b8-86b6-68503341b0c1	Error: Not allowed by CORS
+2023-08-13	03:47:13	b38f7168-d582-4a03-97c8-d1236dfeca8f	Error: Not allowed by CORS
+2023-08-13	03:47:17	867a9beb-5cf2-4f58-87e5-b0a104521fe7	Error: Not allowed by CORS
+2023-08-13	03:47:18	4a847865-ff0e-4523-af85-6fc16c23de99	Error: Not allowed by CORS
+2023-08-13	04:25:09	0651d7d6-041a-489d-9e2b-c4d126985ad3	Error: ENOENT: no such file or directory, stat 'C:\Users\USER -PC\Desktop\practice\node-davegray-tut\expressjs-routing\views\subdir\test.html'
