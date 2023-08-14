@@ -1,7 +1,7 @@
 {
   "name": "davegray",
   "version": "1.0.0",
-  "description": "node express practice",
+  "description": "node express middleware",
   "main": "server.js",
   "scripts": {
     "start": "node server",

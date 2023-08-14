@@ -82,3 +82,5 @@
 2023-08-13	22:49:42	161ed801-bf50-411e-af58-3cee25bba6c2	GET	undefined	/css/style.css
 2023-08-13	22:49:50	3878a601-5ee6-4f0f-967a-c54b2e47002b	GET	undefined	/
 2023-08-13	22:49:50	87f2c168-5bef-4595-a753-b1014e49f4cc	GET	undefined	/css/style.css
+2023-08-14	01:28:51	36df20cd-669d-4c9a-8aee-0f7375b17d55	POST	undefined	/
+2023-08-14	01:29:18	67fcefef-e57e-41af-b487-f9e72ef5e8d4	POST	undefined	/register
