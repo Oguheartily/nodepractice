@@ -27,6 +27,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 /**routes, this directs us to the right pages */
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
+app.use('/auth', require('./routes/auth'));
 app.use('/employees', require('./routes/api/employees'));
 
 /**this is app.all */
