@@ -1,7 +1,7 @@
 {
   "name": "davegray",
   "version": "1.0.0",
-  "description": "node express json web token authentication",
+  "description": "node express json web token authorization",
   "main": "server.js",
   "scripts": {
     "start": "node server",
