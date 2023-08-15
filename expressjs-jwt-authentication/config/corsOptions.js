@@ -1,13 +1,5 @@
-
-// apply cors = Cross Origin Resource Sharing
-/**the whitelist is to restrict the websites that can use cors, 
- * the address with numbers are only to be used in development mode */
-const whitelist = [
-    'http://yoursite.com',
-    'https://www.google.com',
-    'http://127.0.0.1:5500',
-    'http://localhost:3500'
-];
+/** whiteList has been changed to a seperate file called allowedOrigins in the config folder*/
+const allowedOrigins = require('./allowedOrigins');
 /**this is the function that makes cors allow the whitelist specified websites to access the backend */
 const corsOptions = {
     // origin i.e options: (origin ie origin from the requester, callback) => {

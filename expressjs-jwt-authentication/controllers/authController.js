@@ -47,7 +47,7 @@ const handleLogin = async (req, res) => {
         );
         /**though storing access toke in cookie is wrong, if we store it as httpOnly cookie, it cannot be accessed bt javascript */
         /**nameOfCookie, cookie sent, exp time 24h */
-        res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000});
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000});
         /**access token sent as json so the front end developer can grab and use */
         res.json({ accessToken });
     } else {

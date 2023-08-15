@@ -9,11 +9,17 @@ const errorHandler = require('./middleware/errorHandler');
 /**import jwt authorization */
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials');
 
 const PORT = process.env.PORT || 3500;
 
 // custom middleware Logger
-app.use( logger );
+app.use(logger);
+
+/**handle options credentials check before CORS
+ * and fetch cookies credentials requirement
+ */
+app.use(credentials);
 
 /**call cors options function that prevents unwanted url from accessing the backend */
 app.use(cors(corsOptions));
@@ -36,6 +42,7 @@ app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
 app.use('/refresh', require('./routes/refresh'));
+app.use('/logout', require('./routes/logout'));
 /** the refresh endpoint will receive the cookie that has the refresh token
  * and that will isssue a new accrss token once the access token has expired
  */
