@@ -8,3 +8,7 @@
 2023-08-13	03:47:17	867a9beb-5cf2-4f58-87e5-b0a104521fe7	Error: Not allowed by CORS
 2023-08-13	03:47:18	4a847865-ff0e-4523-af85-6fc16c23de99	Error: Not allowed by CORS
 2023-08-13	04:25:09	0651d7d6-041a-489d-9e2b-c4d126985ad3	Error: ENOENT: no such file or directory, stat 'C:\Users\USER -PC\Desktop\practice\node-davegray-tut\expressjs-routing\views\subdir\test.html'
+2023-08-14	15:27:26	c24809cc-abce-4735-8919-b5a0f30b8378	ReferenceError: authheader is not defined
+2023-08-14	15:27:42	fd608f02-3181-426f-8c14-5496219f970b	ReferenceError: authheader is not defined
+2023-08-14	15:28:20	d499c5dd-f2e2-42de-8c42-706fcd7a219a	ReferenceError: authheader is not defined
+2023-08-14	15:48:11	fa6271df-49a7-4889-ace3-76235f53da4c	ReferenceError: authheader is not defined

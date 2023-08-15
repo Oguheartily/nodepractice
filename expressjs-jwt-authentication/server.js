@@ -6,6 +6,10 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
+/**import jwt authorization */
+const verifyJWT = require('./middleware/verifyJWT');
+const cookieParser = require('cookie-parser');
+
 const PORT = process.env.PORT || 3500;
 
 // custom middleware Logger
@@ -21,6 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 /**built-in middleware for json data */
 app.use(express.json());
 
+/**middleware for cookies */
+app.use(cookieParser());
+
 /** serving static files */
 // express searches this public folder before moving to other routes
 app.use('/', express.static(path.join(__dirname, '/public')));
@@ -28,6 +35,15 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+app.use('/refresh', require('./routes/refresh'));
+/** the refresh endpoint will receive the cookie that has the refresh token
+ * and that will isssue a new accrss token once the access token has expired
+ */
+
+/** jwt cannot be checked before the above routes but we need 
+ * if a person is trying to access anything that has to do with employees 
+ * so those that dont need a token, stay above it, so it doesnt affect them */
+app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
 
 /**this is app.all */
