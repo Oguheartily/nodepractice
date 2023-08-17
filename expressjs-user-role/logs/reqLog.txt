@@ -129,3 +129,8 @@
 2023-08-17	15:20:48	bb218272-513c-4fd0-872c-2ce8f28aaa15	GET	undefined	/employees
 2023-08-17	15:22:18	8e7cfbcc-802e-46b2-a33b-4027214a6bb0	POST	undefined	/auth
 2023-08-17	15:22:49	7fa868a8-cc2c-45f6-b7ea-d8003510c15f	GET	undefined	/employees
+2023-08-17	21:14:46	2dc010ba-8a9a-4c8f-92bd-a8e43f3ba81e	POST	undefined	/auth
+2023-08-17	21:15:56	88e917b3-c20c-47e8-8bee-cf5fdcb39449	GET	undefined	/employees
+2023-08-17	21:18:29	a4120aca-49d4-4105-9a86-024d285fea44	POST	undefined	/auth
+2023-08-17	21:18:43	ec117dc2-b398-4aa0-8154-2451036e968f	GET	undefined	/employees
+2023-08-17	21:18:54	d2f4c5c7-7e98-4a5a-92af-22db860ef662	POST	undefined	/employees
