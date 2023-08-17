@@ -1,0 +1,21 @@
+2023-08-05	20:51:07	47649932-85f3-4704-b17b-65e92a268dd8	TypeError: fsPromises.readFil is not a function
+2023-08-13	03:43:18	ddbe7d2c-cac3-4864-bc99-f6fb8854bae1	Error: undefined
+2023-08-13	03:43:18	bb845ff7-3a91-4049-9a14-8617f9aa6ed4	Error: undefined
+2023-08-13	03:45:20	2af1c176-1d17-4636-9f3e-5a0b14beff91	Error: undefined
+2023-08-13	03:45:20	b9155408-f7b2-4126-a71f-45ddfdb97457	Error: undefined
+2023-08-13	03:47:12	8ceea319-fd29-43b8-86b6-68503341b0c1	Error: Not allowed by CORS
+2023-08-13	03:47:13	b38f7168-d582-4a03-97c8-d1236dfeca8f	Error: Not allowed by CORS
+2023-08-13	03:47:17	867a9beb-5cf2-4f58-87e5-b0a104521fe7	Error: Not allowed by CORS
+2023-08-13	03:47:18	4a847865-ff0e-4523-af85-6fc16c23de99	Error: Not allowed by CORS
+2023-08-13	04:25:09	0651d7d6-041a-489d-9e2b-c4d126985ad3	Error: ENOENT: no such file or directory, stat 'C:\Users\USER -PC\Desktop\practice\node-davegray-tut\expressjs-routing\views\subdir\test.html'
+2023-08-14	15:27:26	c24809cc-abce-4735-8919-b5a0f30b8378	ReferenceError: authheader is not defined
+2023-08-14	15:27:42	fd608f02-3181-426f-8c14-5496219f970b	ReferenceError: authheader is not defined
+2023-08-14	15:28:20	d499c5dd-f2e2-42de-8c42-706fcd7a219a	ReferenceError: authheader is not defined
+2023-08-14	15:48:11	fa6271df-49a7-4889-ace3-76235f53da4c	ReferenceError: authheader is not defined
+2023-08-16	23:02:52	a5cc9a7c-cd4a-4708-9a7f-4ede19f63bb9	ReferenceError: whitelist is not defined
+2023-08-16	23:04:44	64cac19c-7744-48e9-8539-129db2ebcdb0	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-16	23:15:49	4712704d-6598-46d3-9558-84b4ba37ad12	ReferenceError: sendStatus is not defined
+2023-08-17	06:19:23	dd39983b-7122-4a79-b371-2564d078bd8f	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	06:28:39	9dc25dab-aab6-4fd0-a06d-5df86357ba8f	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	15:09:00	b280a73b-aa9c-4c52-9e23-fedfdc445eb6	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	15:22:49	55931b75-92de-4fdc-aba0-064c0102c528	TypeError: Cannot read properties of undefined (reading 'username')
