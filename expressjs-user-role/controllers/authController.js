@@ -31,7 +31,7 @@ const handleLogin = async (req, res) => {
         /* create JWTs, do not pass in password, access expiration time 15m is oke, but for testing, we used 30s*/
         const accessToken = jwt.sign(
             {
-                "userInfo": {
+                "UserInfo": {
                     "username": foundUser.username,
                     "roles": roles
                 }
