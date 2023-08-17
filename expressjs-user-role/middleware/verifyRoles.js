@@ -11,6 +11,7 @@ const verifyRoles = (...allowedRoles) => {
          */
         if (!req?.roles) return res.sendStatus(401);
         const rolesArray = [...allowedRoles];
+        console.log("Hello, my code must be visible");
         /**possible roles that this user can access */
         console.log(rolesArray);
         /**all arrays of roles coming from verifyjwt */

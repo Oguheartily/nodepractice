@@ -11,7 +11,6 @@ const bcrypt = require('bcrypt');
 /* import json web token */
 const jwt = require('jsonwebtoken');
 /** import the env file which contains the access token */
-require('dotenv').config();
 const fsPromises = require('fs').promises;
 const path = require('path');
 

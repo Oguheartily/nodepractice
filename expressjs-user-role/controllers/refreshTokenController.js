@@ -8,8 +8,6 @@ const usersDB = {
 }
 /* import json web token */
 const jwt = require('jsonwebtoken');
-/** import the env file which contains the access token */
-require('dotenv').config();
 
 const handleRefreshToken = (req, res) => {
     const cookies = req.cookies;

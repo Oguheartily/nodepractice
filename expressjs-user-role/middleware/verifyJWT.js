@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
+
 
 const verifyJWT = (req, res, next) => {
     /**this is in case the front end developer used capital A in the authorization */
