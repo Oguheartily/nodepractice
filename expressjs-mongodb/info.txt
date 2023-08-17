@@ -1,0 +1,72 @@
+mongodb+srv://heartily414:<password>@nigeriacluster.tz15ce0.mongodb.net/?retryWrites=true&w=majority
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://heartily414:<password>@nigeriacluster.tz15ce0.mongodb.net/?retryWrites=true&w=majority";
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+/***************************************************************************/
+mongoose
+Defining your schema
+Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+
+import mongoose from 'mongoose';
+const { Schema } = mongoose;
+
+const blogSchema = new Schema({
+  title: String, // String is shorthand for {type: String}
+  author: String,
+  body: String,
+  comments: [{ body: String, date: Date }],
+  date: { type: Date, default: Date.now },
+  hidden: Boolean,
+  meta: {
+    votes: Number,
+    favs: Number
+  }
+});
+
+
+mongoose The permitted SchemaTypes are:
+
+String
+Number
+Date
+Buffer
+Boolean
+Mixed
+ObjectId
+Array
+Decimal128
+Map
+UUID
+Rea
+
+Compiling your first model
+When you call mongoose.model() on a schema, Mongoose compiles a model for you.
+
+const schema = new mongoose.Schema({ name: String, size: String });
+const Tank = mongoose.model('Tank', schema);
+The first argument is the singular name of the collection your model is for. Mongoose automatically looks for the plural, lowercased version of your model name. Thus, for the example above, the model Tank is for the tanks collection in the database.
+
+Note: The .model() function makes a copy of schema. Make sure that you've added everything you want to schema, including hooks, before calling .model()!
+---------------------
