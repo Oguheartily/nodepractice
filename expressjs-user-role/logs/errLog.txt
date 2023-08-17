@@ -12,3 +12,10 @@
 2023-08-14	15:27:42	fd608f02-3181-426f-8c14-5496219f970b	ReferenceError: authheader is not defined
 2023-08-14	15:28:20	d499c5dd-f2e2-42de-8c42-706fcd7a219a	ReferenceError: authheader is not defined
 2023-08-14	15:48:11	fa6271df-49a7-4889-ace3-76235f53da4c	ReferenceError: authheader is not defined
+2023-08-16	23:02:52	a5cc9a7c-cd4a-4708-9a7f-4ede19f63bb9	ReferenceError: whitelist is not defined
+2023-08-16	23:04:44	64cac19c-7744-48e9-8539-129db2ebcdb0	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-16	23:15:49	4712704d-6598-46d3-9558-84b4ba37ad12	ReferenceError: sendStatus is not defined
+2023-08-17	06:19:23	dd39983b-7122-4a79-b371-2564d078bd8f	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	06:28:39	9dc25dab-aab6-4fd0-a06d-5df86357ba8f	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	15:09:00	b280a73b-aa9c-4c52-9e23-fedfdc445eb6	TypeError: Cannot read properties of undefined (reading 'username')
+2023-08-17	15:22:49	55931b75-92de-4fdc-aba0-064c0102c528	TypeError: Cannot read properties of undefined (reading 'username')
