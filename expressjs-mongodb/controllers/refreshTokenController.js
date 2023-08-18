@@ -1,15 +1,13 @@
 /**
  * Users usually require registeration and authentication routes
  */
-// the code below looks like a react state
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
-}
+/* importing the mongoose UserSchema */
+const User =  require('../model/User');
+
 /* import json web token */
 const jwt = require('jsonwebtoken');
 
-const handleRefreshToken = (req, res) => {
+const handleRefreshToken = async (req, res) => {
     const cookies = req.cookies;
     // console.log(cookies);
     /**check if we have cookies, also optionally check if it has jwt properties */
@@ -17,8 +15,8 @@ const handleRefreshToken = (req, res) => {
     // console.log(cookies.jwt);
     const refreshToken = cookies.jwt;
 
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
-    if(!foundUser) return res.sendSstatus(403); /**unauthorised status code */
+    const foundUser = await User.findOne({ refreshToken }).exec();
+    if(!foundUser) return res.sendStatus(403); /**unauthorised status code */
     
     /**evaluate jwt */
     jwt.verify(

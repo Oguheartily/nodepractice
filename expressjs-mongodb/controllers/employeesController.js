@@ -2,35 +2,42 @@
  * # this controller file stores the functions for CRUD operations
  * # so they can be accessed anywhere without duplication
  */
-const data = {
-    employees: require('../model/employees.json'),
-    setEmployees: function (data) { this.employee = data }
+/* importing the mongoose UserSchema */
+// const Employee =  require('../model/Employee');
+const Employee = require('../model/Employee');
+
+const getAllEmployees = async (req, res) => {
+    /**calling find without parameter will return all employees */
+    const employees = await Employee.find();
+    if (!employees) return res.status(204).json({
+        'message': 'No employees found.'
+    });
+    res.json(employees);
 }
 
-const getAllEmployees = (req, res) => {
-    res.json(data.employees);
-}
-
-const createNewEmployee = (req, res) => {
-    /**get last employee in data, add +1 to its id and create the new employee */
-    const newEmployee = {
-        id: data.employees[data.employees.length - 1].id + 1 || 1,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname
+const createNewEmployee = async (req, res) => {
+    /**if there is no firstname or lastname */
+    if (!req?.body.firstname || !req?.body.firstname ) {
+        return res.status(400).json({ 'message': 'First and Last names are required.' })
     }
 
-    if(!newEmployee.firstname || !newEmployee.lastname) {
-        return res.status(400).json({ 'message': 'First and Last names are required.' });
-    }
+    try {
+        const result = await Employee.create({
+            firstname: req.body.firstname,       
+            lastname: req.body.lastname       
+        });
 
-    data.setEmployees([...data.employees, newEmployee]);
-    /**201 means the record has been created */
-    res.status(201).json(data.employee);
+        res.status(201).json(result);
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 const updateEmployee = (req, res) => {
     /**check if we received an employee id */
-    const employee = data.employees.find(emp => emp.id === parseInt(req.body.id));
+    if (!req?.body?.id) {
+        return res.status(400).json({ 'message': `Employee id ${req.body.id} not found.` })
+    }
     /**if no employee was found send error code and a message */
     if (!employee) {
         return res.status(400).json({"message": `Employee ID ${req.body.id} not found`});
