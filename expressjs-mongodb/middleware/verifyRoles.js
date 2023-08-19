@@ -11,11 +11,10 @@ const verifyRoles = (...allowedRoles) => {
          */
         if (!req?.roles) return res.sendStatus(401);
         const rolesArray = [...allowedRoles];
-        console.log("Hello, my code must be visible");
         /**possible roles that this user can access */
-        console.log(rolesArray);
+        console.log(`Current User roles: ${rolesArray}`);
         /**all arrays of roles coming from verifyjwt */
-        console.log(req.roles);
+        console.log(`All possible allowed rolls ${req.roles}`);
         /** */
         const result = req.roles.map(role => rolesArray.includes(role)).find(val => val === true);
         /**if we do not find a result, ie no tru value means the role of the user is not in all roles, send  */
